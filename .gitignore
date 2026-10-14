@@ -1,0 +1,9 @@
+*.rtf
+.DS_Store
+
+# Instagram data exports (private, never publish)
+instagram-*/
+instagram-*.zip
+
+# Local Claude Code settings
+.claude/

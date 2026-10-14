@@ -1,0 +1,477 @@
+/* ==========================================================================
+   Xenia von Planta — site styles
+   Colours and fonts live in the variables below so the look can be
+   changed in one place.
+   ========================================================================== */
+
+:root {
+  --bg: #ffffff;
+  --fg: #151515;
+  --muted: #6b6b6b;
+  --accent: #6b6b6b;    /* hover colour: quiet grey, no colour accents */
+  --placeholder: #e9e9e9;
+  --border: #dddddd;
+
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --weight: 300;        /* light body text */
+  --weight-strong: 400; /* headings and site name */
+  --max-width: 1100px;
+  --gutter: 16px;
+  --archive-ratio: 3 / 2; /* crop of the archive tiles */
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-weight: var(--weight);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--weight-strong);
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+/* ---------- Layout ---------- */
+
+.site-header,
+main,
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+main {
+  padding-bottom: 3rem;
+}
+
+.page-intro {
+  max-width: 40rem;
+  margin: 2rem 0;
+}
+
+/* Hidden on screen, still read by screen readers and search engines */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.notice {
+  color: var(--muted);
+}
+
+/* ---------- Header & navigation ---------- */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.site-name {
+  font-weight: var(--weight-strong);
+  text-decoration: none;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  text-decoration: none;
+}
+
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------- Home ---------- */
+
+/* One featured work or poster: a short caption, then the image as large
+   as fits on screen, uncropped (like andygoldsworthystudio.com). */
+.featured {
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.featured__label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.featured__title {
+  display: block;
+  font-weight: var(--weight-strong);
+}
+
+.featured__text {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.featured__img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.featured:hover .featured__title {
+  color: var(--accent);
+}
+
+/* ---------- Galleries ---------- */
+
+.grid {
+  display: grid;
+}
+
+/* Archive: one even grid per year, the date under each tile (change
+   --archive-ratio at the top to crop differently, e.g. 1 for square, 4 / 5 for portrait) */
+.year {
+  margin-bottom: 3.5rem;
+}
+
+.year__title {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.grid--archive {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .grid--archive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid--archive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem 1rem;
+  }
+}
+
+/* FabrikXen: Instagram-style, always three square columns */
+.grid--square {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.tile {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tile__media {
+  position: relative;
+  display: block;
+  aspect-ratio: var(--archive-ratio);
+  background: var(--placeholder);
+  overflow: hidden;
+}
+
+.grid--square .tile__media {
+  aspect-ratio: 1;
+}
+
+.tile__media img,
+.tile__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 200ms;
+}
+
+.tile:hover img,
+.tile:hover video,
+.tile:focus-visible img {
+  opacity: 0.85;
+}
+
+.tile__media--missing {
+  display: grid;
+  place-items: center;
+  padding: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.tile__label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.tile:hover .tile__label {
+  color: var(--accent);
+}
+
+.tile__badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 0 0.4em;
+  background: rgb(0 0 0 / 0.55);
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox {
+  width: min(92vw, 1000px);
+  max-height: 94vh;
+  padding: 0;
+  border: 0;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.lightbox::backdrop {
+  background: rgb(0 0 0 / 0.85);
+}
+
+.lightbox__figure {
+  margin: 0;
+}
+
+.lightbox__stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 40vh;
+  background: var(--placeholder);
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+}
+
+.lightbox__img[hidden] {
+  display: none;
+}
+
+.lightbox__video {
+  width: 100%;
+}
+
+.lightbox__video:empty {
+  display: none;
+}
+
+.lightbox__video video {
+  display: block;
+  width: 100%;
+  max-height: 75vh;
+  background: #000;
+}
+
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  z-index: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  background: rgb(255 255 255 / 0.85);
+  color: #000;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox__close {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.lightbox__prev,
+.lightbox__next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox__prev {
+  left: 0.5rem;
+}
+
+.lightbox__next {
+  right: 0.5rem;
+}
+
+.lightbox__prev[hidden],
+.lightbox__next[hidden] {
+  display: none;
+}
+
+.lightbox__count {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 0.5em;
+  background: rgb(0 0 0 / 0.55);
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.lightbox__count:empty {
+  display: none;
+}
+
+.lightbox__caption {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.lightbox__caption p {
+  margin: 0.25em 0;
+}
+
+.lightbox__text {
+  white-space: pre-line; /* keep the line breaks of Instagram captions */
+}
+
+.lightbox__date {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.availability {
+  color: var(--muted);
+}
+
+/* ---------- Single work page ---------- */
+
+.work {
+  margin-top: 2rem;
+}
+
+.work__title {
+  margin-bottom: 1.5rem;
+}
+
+.work__video {
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+}
+
+.work__video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.work__photos {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.work__text {
+  max-width: 40rem;
+}
+
+.work__text p {
+  margin: 0 0 0.5em;
+}
+
+.work__details {
+  color: var(--muted);
+}
+
+.work__nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+.work__nav a {
+  text-decoration: none;
+}
+
+.work__nav a:last-child {
+  text-align: right;
+}

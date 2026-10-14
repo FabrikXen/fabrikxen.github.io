@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Adriano, La Guaira",
+    "year": 2026,
+    "month": 7,
+    "folder": "2026_adriano-la-guaira",
+    "medium": "Charcoal",
+    "size": "",
+    "location": "Caracas, Venezuela",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "1.jpg"
+    ]
+  },
+  {
+    "title": "Amoeba",
+    "year": 2022,
+    "medium": "",
+    "size": "",
+    "description": "",
+    "availability": "",
+    "vimeo": "https://vimeo.com/1197098227"
+  },
+  {
+    "title": "Swings",
+    "year": 2021,
+    "medium": "",
+    "size": "",
+    "description": "",
+    "availability": "",
+    "vimeo": "https://vimeo.com/1197098036"
+  }
+]
