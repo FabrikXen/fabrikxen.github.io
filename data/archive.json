@@ -10,25 +10,169 @@
     "description": "",
     "availability": "",
     "photos": [
-      "1.jpg"
+      "2026-07_adriano-la-guaira.jpg"
     ]
   },
   {
     "title": "Amoeba",
     "year": 2022,
+    "folder": "2022_amoeba",
     "medium": "",
     "size": "",
     "description": "",
     "availability": "",
-    "vimeo": "https://vimeo.com/1197098227"
+    "vimeo": "https://vimeo.com/1197098227",
+    "photos": [
+      "2021-03-05_amoeba_1.jpg"
+    ]
   },
   {
     "title": "Swings",
     "year": 2021,
+    "folder": "2021_swings",
     "medium": "",
     "size": "",
     "description": "",
     "availability": "",
-    "vimeo": "https://vimeo.com/1197098036"
+    "vimeo": "https://vimeo.com/1197098036",
+    "photos": [
+      "2019-06-27_swings.jpg"
+    ]
+  },
+  {
+    "title": "Bioinformatics",
+    "year": 2021,
+    "folder": "2021_bioinformatics",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2021_bioinformatics.jpg",
+      "2021_bioinformatics-r-code.jpg"
+    ]
+  },
+  {
+    "title": "Songbirds",
+    "year": 2021,
+    "month": 6,
+    "folder": "2021_songbirds",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2021-06-16_songbirds.jpg",
+      "2021-08_deep-learning.jpg"
+    ]
+  },
+  {
+    "title": "Worms",
+    "year": 2019,
+    "month": 7,
+    "folder": "2019_worms",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2019-07-17_worms.jpg",
+      "2019-07-17_worm-laid-bare.jpg"
+    ]
+  },
+  {
+    "title": "Self Portrait",
+    "year": 2019,
+    "month": 2,
+    "folder": "2019_self-portrait",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2019-02-13_self-portrait_1.jpg",
+      "2019-02-13_self-portrait_2.jpg"
+    ]
+  },
+  {
+    "title": "Colour Explosion",
+    "year": 2018,
+    "month": 9,
+    "folder": "2018_colour_explosion",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2018-09-18_colour-explosion.jpg"
+    ]
+  },
+  {
+    "title": "Porno Giraffe",
+    "year": 2018,
+    "month": 9,
+    "folder": "2018_porno-giraffe",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2018-09_porno-giraffe.jpg"
+    ]
+  },
+  {
+    "title": "Depression",
+    "year": 2018,
+    "month": 7,
+    "folder": "2018_depression",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2018-07-01_depression_1.jpg",
+      "2018-07-02_depression_2.jpg",
+      "2018-07-02_depression_3.jpg",
+      "2018-07-02_insomnia.jpg"
+    ]
+  },
+  {
+    "title": "Bedroom",
+    "year": 2017,
+    "month": 11,
+    "folder": "2017_bedroom",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2017-11-10_bedroom_1.jpg",
+      "2017-11-10_bedroom_2.jpg",
+      "2017-11_room-door.jpg"
+    ]
+  },
+  {
+    "title": "Colours",
+    "year": 2017,
+    "month": 10,
+    "folder": "2017_colours",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2017-10-26_colours_1.jpg",
+      "2017-10-26_colours_2.jpg",
+      "2017-10-26_colours_3.jpg"
+    ]
   }
 ]

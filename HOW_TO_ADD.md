@@ -41,7 +41,7 @@ Mind the commas: every entry except the last one ends with `},`.
 
 1. Make a folder: `assets/img/archive/<year>_<title>/`
    (lowercase, dashes, e.g. `2024_blue-waves`) and put the photos in it,
-   named `1.jpg`, `2.jpg`, …
+   named with their date and a name, e.g. `2024-05-12_blue-waves.jpg`.
 2. Add an entry anywhere in `data/archive.json`:
 
 ```json
@@ -55,7 +55,7 @@ Mind the commas: every entry except the last one ends with `},`.
     "location": "Caracas, Venezuela",
     "description": "One or two sentences.",
     "availability": "Available",
-    "photos": ["1.jpg", "2.jpg"]
+    "photos": ["2024-05-12_blue-waves.jpg", "2024-05-12_blue-waves-detail.jpg"]
   },
 ```
 

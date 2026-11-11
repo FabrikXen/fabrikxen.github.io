@@ -59,6 +59,7 @@ function renderArchive(works) {
         photos: workPhotos(work),
         vimeo: work.vimeo,
         label: workDate(work), // like andygoldsworthystudio.com: only the date under each tile
+        film: Boolean(work.vimeo),
         href: `work.html?id=${workId(work)}`,
       };
       grid.append(createTile(item));
@@ -248,6 +249,13 @@ function createTile(item, onClick) {
     vimeoThumbnail(item.vimeo).then((url) => (img.src = url)).catch(showMissing);
   } else {
     showMissing();
+  }
+
+  // Films in the archive get a small play symbol on their still.
+  if (item.film) {
+    const play = el("span", "tile__play");
+    play.setAttribute("aria-hidden", "true");
+    media.append(play);
   }
 
   const hasVideo = item.photos.some(isVideoFile);
