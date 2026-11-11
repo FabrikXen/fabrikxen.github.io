@@ -19,7 +19,7 @@
   --max-width: 1100px;
   --gutter: 16px;
   --archive-ratio: 1;    /* shape of the archive tiles (square) */
-  --mount: #f3f3f3;      /* pale background around archive images */
+  --mount: #ffffff;      /* background around archive images */
 }
 
 /* ---------- Base ---------- */
@@ -206,7 +206,7 @@ main {
   font-size: 1.75rem;
 }
 
-/* Each work shown whole, centred in an even square on a pale "mount" */
+/* Each work shown whole, centred in an even white square */
 .grid--archive {
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem 1.5rem;
