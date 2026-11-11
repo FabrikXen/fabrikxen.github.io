@@ -468,10 +468,30 @@ main {
   border: 0;
 }
 
+/* Photos on a work page: uncropped, stacked, all the same size: each fits the
+   same square, so a landscape is as wide as a portrait is tall */
 .work__photos {
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.work__photo {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.work__photo img {
+  --photo-size: min(70vh, 760px, 100vw - 2 * var(--gutter));
+  width: auto;
+  height: auto;
+  max-width: var(--photo-size);
+  max-height: var(--photo-size);
 }
 
 .work__text {

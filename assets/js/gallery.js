@@ -100,15 +100,25 @@ function renderWork(works, lightbox) {
     article.append(video);
   }
 
-  // Photos as a row of thumbnails; clicking one opens them all in the lightbox.
+  // Every photo whole, in its own shape (never cropped), one below the other.
+  // Clicking one opens them all full screen in the lightbox.
   const photos = workPhotos(work);
   if (photos.length > 0 && !(work.vimeo && photos.length === 1)) {
     const item = { alt: work.title, photos, caption: [el("p", null, work.title)] };
-    const grid = el("div", "grid work__photos");
+    const list = el("div", "work__photos");
     photos.forEach((photo, i) => {
-      grid.append(createTile({ alt: `${work.title} (photo ${i + 1})`, photos: [photo] }, () => lightbox.open(item, i)));
+      const button = el("button", "work__photo");
+      button.type = "button";
+      button.setAttribute("aria-label", `Enlarge ${work.title} (photo ${i + 1})`);
+      const img = el("img");
+      img.src = photo;
+      img.alt = photos.length > 1 ? `${work.title} (photo ${i + 1} of ${photos.length})` : work.title;
+      img.loading = i === 0 ? "eager" : "lazy";
+      button.append(img);
+      button.addEventListener("click", () => lightbox.open(item, i));
+      list.append(button);
     });
-    article.append(grid);
+    article.append(list);
   }
 
   const text = el("div", "work__text");
