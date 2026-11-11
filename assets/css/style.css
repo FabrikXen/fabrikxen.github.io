@@ -18,7 +18,8 @@
   --weight-strong: 400; /* headings and site name */
   --max-width: 1100px;
   --gutter: 16px;
-  --archive-ratio: 3 / 2; /* crop of the archive tiles */
+  --archive-ratio: 1;    /* shape of the archive tiles (square) */
+  --mount: #f3f3f3;      /* pale background around archive images */
 }
 
 /* ---------- Base ---------- */
@@ -205,15 +206,19 @@ main {
   font-size: 1.75rem;
 }
 
+/* Each work shown whole, centred in an even square on a pale "mount" */
 .grid--archive {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem 1.5rem;
 }
 
-@media (max-width: 900px) {
-  .grid--archive {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.grid--archive .tile__media {
+  padding: 3%;
+  background: var(--mount);
+}
+
+.grid--archive .tile__media img {
+  object-fit: contain;
 }
 
 @media (max-width: 600px) {
