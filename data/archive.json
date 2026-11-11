@@ -1,5 +1,26 @@
 [
   {
+    "title": "Colours",
+    "id": "colours-2026",
+    "year": 2026,
+    "month": 9,
+    "folder": "2026_colours",
+    "medium": "",
+    "size": "",
+    "location": "",
+    "description": "",
+    "availability": "",
+    "photos": [
+      "2026-09-22_colours_1.jpg",
+      "2026-09-22_colours_2.jpg",
+      "2026-09-22_colours_3.jpg",
+      "2026-09-22_colours_4.jpg",
+      "2026-09-22_colours_5.jpg",
+      "2026-09-22_colours_6.jpg",
+      "2026-09-22_colours_7.jpg"
+    ]
+  },
+  {
     "title": "Fog Polaroids",
     "year": 2026,
     "month": 11,
@@ -193,6 +214,7 @@
   },
   {
     "title": "Colours",
+    "id": "colours-2017",
     "year": 2017,
     "month": 10,
     "folder": "2017_colours",
